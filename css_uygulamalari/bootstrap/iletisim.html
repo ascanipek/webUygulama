@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Her satır 12 birimlik alanlardan oluşur -->
+        <!-- Üst Menü satırı -->
+        <div class="row mb-2">
+            <div class="col-lg-3 col-sm-12 col-xs-12 col-lg-offset-3">
+                <a href="#" class="btn btn-link">Projeler</a>
+                <a href="#" class="btn btn-link">Ekip</a>
+                <a href="#" class="btn btn-link">İletişim</a>
+            </div>
+        </div>
+        <!-- Banner satırı -->
+        <div class="row">
+            <div class="col-12">
+                <img src="img/banner.jpg" class="img-fluid" alt="">
+            </div>
+        </div>
+        <!-- Arama kutusu satırı -->
+        <div class="row mt-2">
+            <div class="col-5">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item" aria-current="page">Anasayfa</li>
+                      <li class="breadcrumb-item active" aria-current="page">İletişim</li>
+                    </ol>
+                  </nav>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-3">
+                <input type="text" class="form-control" placeholder="Ara..">
+            </div>
+        </div>
+        <!-- Gövde -->
+        <!-- Menu Alanı -->
+        <div class="row">
+            <div class="col-lg-3 col-lg-3 col-xl-2 col-xxl-3 col-sm-12 col-xs-12">
+                <div class="list-group">
+                    <a href="index.html" class="list-group-item list-group-item-action">Anasayfa</a>
+                    <a href="hakkimizda.html" class="list-group-item list-group-item-action ">Hakkımzda</a>
+                    <a href="iletisim.html" class="list-group-item list-group-item-action active">İletişim</a>
+                </div>
+            </div>
+            <div class="col-lg-9 col-xl-9 col-xxl-9 col-sm-12 col-xs-12 mt-3">
+                <h1>İletişim</h1>
+                <form>
+                    <div class="mb-2">
+                        <label for="isim">İsminizi Girin</label>
+                        <input type="text" id="isim" placeholder="İsminiz" class="form-control">
+                    </div>
+                    
+                    <div class="mb-2">
+                        <label for="eposta">E-Posta Adresinizi Girin</label>
+                        <input type="email" id="eposta" placeholder="E-Posta" class="form-control">
+                    </div>
+                    
+                    <div class="mb-2">
+                        <label for="tel">Telefon Numaranızı Girin</label>
+                        <input type="number" id="tel" placeholder="Telefonunuz" class="form-control">
+                    </div>
+                    
+                    <div class="mb-2">
+                        <label for="gorus" class="form-label">Görüşleriniz</label>
+                        <textarea class="form-control" id="gorus" rows="3"></textarea>
+                    </div>
+
+                    <div class="mb-2 d-grid gap-2">
+                        <button class="btn btn-success btn-block">Kaydet</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

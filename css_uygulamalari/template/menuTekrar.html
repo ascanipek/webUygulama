@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menüler</title>
+</head>
+<body>
+    <!-- Dikey Menü -->
+    <h3>Dikey Menü</h3>
+    <ul id="dikeyMenu">
+        <a href="#"><li>Anasayfa</li></a>
+        <a href="#"><li>Projeler</li></a>
+        <a href="#"><li>İletişim</li></a>
+    </ul>
+
+    <hr>
+    <h3>Yatay Menü</h3>
+    <ul id="yatayMenu">
+        <a href="#"><li>Anasayfa</li></a>
+        <a href="#"><li>Projeler</li></a>
+        <a href="#"><li>İletişim</li></a>
+    </ul>
+
+    <hr>
+    <h3>Dikey Açılır Menü</h3>
+    <ul id="dikeyAcilirMenu">
+        <a href="#"><li>Anasayfa</li></a>
+        <a href="#">
+            <li>Projeler
+                <ul id="altMenu">
+                    <li>Yazılım</li>
+                    <li>Tasarım</li>
+                    <li>Eğitim</li>
+                </ul>
+            </li>
+        </a>
+        <a href="#"><li>İletişim</li></a>
+    </ul>
+</body>
+
+<style>
+    ul#dikeyMenu{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul#dikeyMenu > a{
+        color:white;
+        text-decoration: none;
+        font-size: 23px;
+        line-height: 2em;
+        letter-spacing: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    ul#dikeyMenu > a > li{
+        display: block; /* Önemli - Dikey Menüde block olmalı! */
+        background-color: cornflowerblue;
+        width: 500px;
+        text-align: center;
+        border: rgb(4, 69, 189) 1px solid;
+        border-radius: 50px;
+        margin-bottom: 2px;        
+    }
+
+    ul#dikeyMenu > a > li:hover{
+        background-color: rgb(73, 120, 206);
+    }
+
+    ul#yatayMenu{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul#yatayMenu > a{
+        color: white;
+        text-decoration: none;
+        font-size: 23px;
+        line-height: 2em;
+        letter-spacing: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    ul#yatayMenu > a > li{
+        display: inline-block;  /* Önemli - inline veya inline-block olmalı! */
+        /* float: left; inline yerine bu da olabilir! */ 
+        background-color: royalblue;
+        width: 250px;
+        text-align: center;
+        border: rgb(4, 69, 189) 1px solid;
+        border-radius: 50px;
+        margin-bottom: 2px;  
+        margin-right: 5px;
+    }
+    ul#yatayMenu > a > li:hover{
+        background-color: black;
+    }
+
+    ul#dikeyAcilirMenu{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 300px;
+    }
+    ul#dikeyAcilirMenu > a{
+        text-decoration: none;
+        color: white;
+        font-size: 23px;
+        line-height: 2em;
+        letter-spacing: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    ul#dikeyAcilirMenu > a >li {
+        background-color: tomato;
+    }
+    
+    ul#dikeyAcilirMenu ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+        position: relative;
+        left: 300px;
+        top: -30px;
+    }
+    ul#dikeyAcilirMenu > a >li:hover ul{
+        display: block;
+    }
+
+    ul#altMenu >li {
+        background-color: tomato;
+    }
+   
+    
+
+</style>
+</html>

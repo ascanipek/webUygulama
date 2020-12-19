@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+</head>
+<body>
+    <div id="top-bar">
+        <span id="menu">
+            <span class="top-menu"> Gmail</span>
+            <span class="top-menu"> Görseller </span>
+        </span>
+        <img id="profil" src="profile.jpg" alt="">
+        <img id="ikon" src="ikon.png" alt="">
+    </div>
+    <div id="logo">
+        <img src="logo.png" width="272" alt="">
+    </div>
+    <div id="search">
+        <input type="text" id="searchInput">
+    </div>
+    <div id="butonlar">
+        <button class="buton">Google'da Ara</button>
+        <button class="buton">Kendimi Şanslı Hissediyorum</button>
+    </div>
+    <div id="not">
+        <span>Google'ı kullanabileceğiniz diğer diller: <a href="#">English</a></span>
+    </div>
+</body>
+<style>
+    #top-bar{
+        width: auto;
+        padding: 10px;
+        margin: 5px;
+        text-align: right;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        height: 50px;
+    }
+    #profil{
+        width: 32px;
+        height: 32px;
+        border-radius: 16px;
+        float: right;
+    }
+    #ikon{
+        width: 32px;
+        height: 32px;
+        float: right;
+        margin-right: 10px;
+    }
+    #menu{
+        line-height: 33px;
+    }
+    .top-menu{
+        margin-right: 10px;
+    }
+    .top-menu:hover{
+       text-decoration: underline;
+       cursor: pointer;
+    }
+
+    #logo{
+        text-align: center;
+        margin-top: 109px;
+    }
+
+    #search{
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    #searchInput{
+        background-color: transparent;
+        border: 1px #e8eaec solid;
+        border-radius: 30px;
+        width: 400px;
+        height: 40px;
+        font-size: 17px;
+        padding: 3px 30px 3px 30px;
+    }
+    #searchInput:hover{
+        text-shadow: 2px 2px gray;
+    }
+    #butonlar{
+        text-align: center;
+        padding-top: 10px;
+        margin-top: 30px;
+    }
+    .buton{
+        border: 0;
+        width: auto;
+        padding: 15px 15px 15px 15px;
+        background-color: #f8f9fa;
+    }
+    .buton:hover{
+        cursor: pointer;
+    }
+
+    #not{
+        text-align: center;
+        margin-top: 30px;
+    }
+
+</style>
+</html>

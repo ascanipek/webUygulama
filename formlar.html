@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formlar</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="Ad" required> <br>
+        <input type="email" placeholder="E-Posta" required> <br>
+        <input type="number" placeholder="Yaş" required> <br>
+        <input type="date"> <br>
+        <input type="datetime-local"> <br>
+        <input type="month"> <br>
+        <input type="time"> <br>
+        <input type="file"> <br>
+        <input type="range" max="100" min="0"> <br>
+        <input type="password" placeholder="Parola" required> <br>
+
+        <select required>
+            <option value="0">Bölümünüz</option>
+            <option value="Bilişim">Bilişim Teknolojileri</option>
+            <option value="Elektrik">Elektrik Elektronik</option>
+            <option value="RTV">RTV</option>
+            <option value="Gazetecilik">Gazetecilik</option>
+        </select> 
+
+        <br>
+        <!-- Checkbox elemanında name parametresi aynı olmalıdır. Value değerleri boş bırakılmamalıdır. -->
+        <u>Hobileriniz</u> <br>
+        Ata Binmek: <input type="checkbox" name="hobi" value="at"> <br>
+        Bisiklet Sürmek: <input type="checkbox" name="hobi" value="bisiklet"> <br>
+        Kitap Okumak: <input type="checkbox" name="hobi" value="kitap" > <br>
+
+        <!-- Radio elemanında name parametresi aynı olmalıdır. Value değerleri boş bırakılmamalıdır. -->
+
+        <u>Cinsiyet:</u> <br>
+        Erkek: <input type="radio" name="cinsiyet" value="erkek"> <br>
+        Kadın: <input type="radio" name="cinsiyet" value="kadin"> <br>
+
+        <br>
+        <input type="submit" value="Kaydet"> 
+        <input type="reset" value="Temizle"> 
+        <br>
+        <!-- Veya Buton bu şekilde de kullanılabilir -->
+        <!-- 
+        <button type="submit">Giriş Yap</button>
+        <button type="reset">Temizle</button>
+         -->
+         <textarea name="" id="" cols="60" rows="20" placeholder="Uzun Metin"></textarea>
+    </form>
+
+<table border="1">
+    <tr>
+        <th>Kazandığı Maçlar</th>
+        <th>Kaybettiği Maçlar</th>
+    </tr>
+    <tr>
+        <td>Ahmet</td>
+        <td> </td>
+    </tr>
+
+</table>
+
+
+</body>
+</html>

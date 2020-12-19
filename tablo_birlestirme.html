@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablo Hücre Birleştirme</title>
+</head>
+<body>
+    <table border="1" width="400" align="center">
+        <tr>
+            <td colspan="5" align="center">Yatayda birleştirilmiş 5 hücre</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Dikey 3</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>A</td>
+            <td colspan="2">Yatay 2</td>
+            
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+            <td>A</td>
+        </tr>
+    </table>
+    <br> <br>
+    <table border="1" align="center" width="400">
+        <tr>
+            <td rowspan="2">&nbsp;</td>
+            <td colspan="2" align="center"><strong>avarage</strong></td>
+            <td rowspan="2" align="center" width="80"><strong>other category</strong></td>
+        </tr>
+        <tr>
+            <td align="center"><strong>height</strong></td>
+            <td align="center"><strong>width</strong></td>
+        </tr>
+        <tr>
+            <td><strong>males</strong></td>
+            <td align="center">1.9</td>
+            <td align="center">0.003</td>
+            <td align="center">yyy</td>
+        </tr>
+        <tr>
+            <td><strong>females</strong></td>
+            <td align="center">1.7</td>
+            <td align="center">0.002</td>
+            <td align="center">xxx</td>
+        </tr>
+    </table>
+    <br>
+    <table border="1" align="center" width="400">
+        <tr>
+            <td rowspan="2">&nbsp;</td>
+            <td colspan="2" align="center"><strong>avarage</strong></td>
+            <td rowspan="2" align="center" width="80"><strong>other category</strong></td>
+        </tr>
+        <tr>
+            <td align="center"><strong>height</strong></td>
+            <td align="center"><strong>width</strong></td>
+        </tr>
+        <tr>
+            <td><strong>males</strong></td>
+            <td align="center" colspan="2" rowspan="2">1.9</td>
+            <!-- <td align="center">0.003</td> -->
+            <td align="center">yyy</td>
+        </tr>
+        <tr>
+            <td><strong>females</strong></td>
+            <!-- <td align="center">1.7</td>
+            <td align="center">0.002</td> -->
+            <td align="center">xxx</td>
+        </tr>
+    </table>
+    <br>
+    <table border="1" align="center" width="400">
+        <tr>
+            <td align="center">1</td>
+            <td align="center" colspan="4">2</td>
+        </tr>
+        <tr>
+            <td rowspan="3" align="center">3</td>
+            <td align="center" bgcolor="red">4</td>
+            <td align="center" bgcolor="purple">5</td>
+            <td align="center" colspan="2" rowspan="2" bgcolor="red">6</td>
+        </tr>
+        <tr>
+            <td align="center" bgcolor="red">7</td>
+            <td align="center" bgcolor="purple">8</td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2" bgcolor="yellow">9</td>
+            <td align="center" colspan="2" bgcolor="purple">10</td>
+        </tr>
+    </table>
+</body>
+</html>

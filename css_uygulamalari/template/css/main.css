@@ -1,0 +1,194 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: .5px;
+    font-weight: lighter;
+}
+#tutucu{
+    width: 900px;
+    margin: 0 auto;
+    
+}
+#banner{
+    width: 900px;
+}
+#logo{
+    width: 900px;
+}
+#top-bar{
+    width: 900px;
+    margin-bottom: 30px;
+}
+#breadcrumb{
+    float: left;
+    width: 600px;
+}
+#search{
+    text-align: right;
+    float: right;
+    width: 300px;
+    margin-right: 0;
+}
+#menu{
+    width: 200px;
+    float: left;
+}
+#content{
+    width: 700px;
+    
+   
+    float: right;
+   
+}
+h3{
+    margin: 0;
+    padding: 0;
+}
+
+.sol-menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+}
+.sol-menu > li{
+    display: block;
+    background-color: rgb(235, 99, 45);
+    color: white;
+    font-size: 17px;
+    text-align: center;
+    margin-bottom: 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.sol-menu a{
+    text-decoration: none;
+    color:white;
+}
+#alt{
+    clear: both;
+    /* margin-top: 20em; */
+    position: fixed;
+    width: 900px;
+    height: 30px;
+    padding-top: 10px;
+    top: 96%;
+    background-color: rgb(230, 77, 10);
+    text-align: center;
+    color: white;
+    
+}
+#ustMenu{
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    margin-bottom: 3px;
+    width: 100%;
+    float: right;
+    text-align: right;
+}
+#ustMenu > li{
+    display: inline-block;
+    background-color: rgb(97, 64, 26);
+    padding: 3px 5px 7px 5px;
+    width: 70px;
+    height: 20px;
+    text-align: center;
+}
+#ustMenu > li:hover{
+    background-color:  rgb(153, 105, 49);
+
+}
+#ustMenu > li > a{
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
+#acilirMenu{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 180px;
+    margin-left: 10px;
+}
+#acilirMenu > li {
+    border: 1px solid black;
+    margin-bottom: 2px;
+    background-color: indianred;
+    text-align: center;
+    padding-top: 5px;
+    height: 25px;
+}
+
+/* Önemli Nokta 1 */
+#acilirMenu > li:hover ul{  
+    display: block;
+}
+
+#acilirMenu > li > a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+/* Önemli Nokta 2 */
+ul.altMenu{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+    left: 180px;
+    top: -23px;
+    display: none;
+}
+
+ul.altMenu > li{
+    position: relative;
+    border: 1px solid black;
+    margin-bottom: 2px;
+    background-color: indianred;
+    text-align: center;
+    padding-top: 5px;
+    height: 25px;
+}
+ul.altMenu > li > a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+table{
+    width: 100%;
+}
+
+.myForm{
+    width: 95%;
+    height: 30px;
+    padding: 10px;
+    color: lightsalmon;
+    border: 1px solid lightsalmon;
+    font-size: 17px;
+}
+.myForm::placeholder, textarea::placeholder{
+    color: lightsalmon;
+    font-size: 17px;
+}
+
+textarea{
+    width: 95%;
+    padding: 10px;
+    color: lightsalmon;
+    border: 1px solid lightsalmon;
+    font-size: 17px;
+}
+
+.buton{
+    margin: 0;
+    width: 99%;
+    padding: 10px;
+    height: 40px;
+    font-size: 17px;
+    background-color: lightsalmon;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablolar</title>
+</head>
+<body>
+        <!-- Satır oluşturmak için tr (Table Row (row: satır)) -->
+        <!-- Sütun oluşturmak için tr'nin içinde td (table division: sütun, hücre) -->
+    <table class="otomatik">
+        <caption>Tablo Başlığı</caption>
+        <thead>
+            <tr>
+                <th>Fotoğraf</th>
+                <th>No</th>
+                <th>İsim</th>
+                <th>Soyisim</th>
+                <th>Sınıf</th>
+                <th>Bilgi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center"> <img src="resimler/avatar/resimBir.png" width="35" alt=""> </td>
+                <td>674</td>
+                <td>Enes</td>
+                <td>ŞEN</td>
+                <td>11/B</td>
+                <th> <a href="#" > Detaylar </a> </th>
+            </tr>
+            <tr>
+                <td align="center"> <img src="resimler/avatar/resim.png" width="35" alt=""> </td>
+                <td>777</td>
+                <td>Eren</td>
+                <td>Ülgür</td>
+                <td>11/B</td>
+                <th> <a href="#" > Detaylar </a> </th>
+            </tr>
+            <tr>
+                <td align="center"> <img src="resimler/avatar/resimBir.png" width="35" alt=""> </td>
+                <td>262</td>
+                <td>Barış</td>
+                <td>GÜÇ</td>
+                <td>11/B</td>
+                <th> <a href="ogrenciler/baris.html" > Detaylar </a> </th>
+            </tr>
+            <tr>
+                <td align="center"> <img src="resimler/avatar/resimKiz.jpg" width="35" alt=""> </td>
+                <td>554</td>
+                <td>EZGİ</td>
+                <td>TOP</td>
+                <td>11/B</td>
+                <th> <a href="ogrenciler/ezgi.html" > Detaylar </a> </th>
+            </tr>
+            <tr>
+                <td align="center"> <img src="resimler/avatar/resimBir.png" width="35" alt=""> </td>
+                <td>99</td>
+                <td>Yusufcan</td>
+                <td>BOLAT</td>
+                <td>11/B</td>
+                <th> <a href="ogrenciler/yusufcan.html" > Detaylar </a> </th>
+            </tr>
+            <tr>
+                <td align="center"> <img src="resimler/avatar/resimBir.png" width="35" alt=""> </td>
+                <td>209</td>
+                <td>Batuhan</td>
+                <td>YETİM</td>
+                <td>11/B</td>
+                <th> <a href="ogrenciler/batuhan_yetim.html" > Detaylar </a> </th>
+            </tr>
+            <tr>
+                <td align="center"> <img src="resimler/avatar/resimBir.png" width="35" alt=""> </td>
+                <td>721</td>
+                <td>Berkan</td>
+                <td>Arkan</td>
+                <td>11/B</td>
+                <th> <a href="#" > Detaylar </a> </th>
+            </tr>
+            <tr>
+                <td align="center"> <img src="resimler/avatar/resimBir.png" width="35" alt=""> </td>
+                <td>310</td>
+                <td>Erdi</td>
+                <td>Köfter</td>
+                <td>11/B</td>
+                <th> <a href="ogrenciler/erdi_kofter.html"> Detaylar </a> </th>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+<style>
+    table.otomatik{
+        table-layout: auto;
+        width: 350px;
+        border-collapse: collapse;
+        caption-side: bottom;
+        border-spacing: 10px;
+    }
+
+    table.sabit{
+        table-layout: fixed;
+        width: 300px;
+        border-collapse: collapse;
+    }
+
+    td, th{
+        border: 1px solid #000;
+        cursor: move;
+    }
+</style>
+
+
+</html>

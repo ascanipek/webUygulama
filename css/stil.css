@@ -1,0 +1,82 @@
+h3{
+    font-size: 1.33em;
+    color:#ff3366;
+    font-family: 'Open Sans', sans-serif;  
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    text-align: center;
+    text-transform: uppercase;
+    width: 500px;
+    /* margin-left: 30%; */
+    padding: 30px;
+    background-color: rgb(235, 208, 122);
+    border-radius: 50px;
+  }
+  h3:hover{
+      background-color: rgb(196, 152, 9);
+      color: #fff;
+  }
+
+  p, div{
+      font-size: 17px;
+      color: rgb(73, 73, 73);
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 500;
+      margin-left: 30px;
+      margin-right: 30px;
+      text-align: justify;
+      text-indent: 30px;
+      line-height: 30px;
+      text-shadow: #666 1px 1px;
+      /* background-color: khaki; */
+      /* letter-spacing: -5px; */
+  }
+
+  #box{
+    width: 11em;
+    height: 180px;
+    background-color: #30475e;
+    text-align: center;
+    color: cornsilk;
+    font-size: 27px;
+    padding-top: 120px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 5px dashed #ff3366;
+    border-top: 15px dashed #ff3366;
+    border-radius: 50px;
+    vertical-align: middle;
+    background-image: url('resimler/resim.png');
+  }
+
+  #liste{
+    list-style-type: none;  
+    /* list-style-image: url('resimler/resim.png'); */
+    padding: 0;
+    margin: 0;
+    margin-top: 30px;
+  }
+  #liste > li{
+    background-color: #ff3366;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 1px;
+    padding: 10px;
+    display: block;
+    width: 200px;
+    text-align: center;
+    
+  }
+
+  #liste > li:hover{
+    background-color: #a51e40;
+  }
+
+
+  #liste > li > a{
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: #000 1px 1px;
+  }
