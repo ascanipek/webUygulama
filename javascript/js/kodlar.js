@@ -28,11 +28,18 @@ else if(saat >= 21)
         secondNumber = parseInt(secondNumber)
         let enBuyuk
         let sonuc = document.querySelector('#sonuc')
-        if(firstNumber > secondNumber){
+        
+        if(sonuc.value === '' || sonuc.value == null) {
+            enBuyuk = 'Sayı Giriniz'
+            sonuc.style.visibility = 'visible'
+            sonuc.classList.add("alert-success");
+            sonuc.innerHTML = 'Lütfen Sayı Giriniz '
+        }
+        else if(firstNumber > secondNumber){
             enBuyuk = firstNumber
             sonuc.style.visibility = 'visible'
-            sonuc.classList.add("alert-danger");
-            document.querySelector('#sonuc').innerHTML = 'Birinci Sayı daha Büyük: ' + enBuyuk
+            sonuc.classList.add("alert-dark");
+            sonuc.innerHTML = 'Birinci Sayı daha Büyük: ' + enBuyuk
         }
         else if( secondNumber > firstNumber){
             enBuyuk = secondNumber
