@@ -23,18 +23,22 @@ else if(saat >= 21)
         let firstNumber = document.querySelector('#sayiBir').value
         let secondNumber = document.querySelector('#sayiIki').value
         // veriler tamsayıya çevriliyor
-        console.log(document.querySelector('#sonuc'))
-        firstNumber = parseInt(firstNumber)
-        secondNumber = parseInt(secondNumber)
+        // console.log(document.querySelector('#sonuc'))
         let enBuyuk
         let sonuc = document.querySelector('#sonuc')
-        if(firstNumber > secondNumber){
+        if(firstNumber === '' || secondNumber === '')
+            alert("Boş bırakmayın")
+        else if(firstNumber > secondNumber){
+            firstNumber = parseInt(firstNumber)
+            secondNumber = parseInt(secondNumber)
             enBuyuk = firstNumber
             sonuc.style.visibility = 'visible'
             sonuc.classList.add("alert-danger");
             document.querySelector('#sonuc').innerHTML = 'Birinci Sayı daha Büyük: ' + enBuyuk
         }
         else if( secondNumber > firstNumber){
+            firstNumber = parseInt(firstNumber)
+            secondNumber = parseInt(secondNumber)
             enBuyuk = secondNumber
             sonuc.style.visibility = 'visible'
             sonuc.classList.add("alert-warning");
