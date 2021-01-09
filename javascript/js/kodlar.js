@@ -119,4 +119,29 @@ for(i=1; i<=301; i++){
         yedi.appendChild(span)
     }
 }
-document.querySelector('#yediToplam').innerHTML = 'Toplam: ' + yedilerinToplami
+// document.querySelector('yediToplam').innerHTML = 'Toplam: ' + yedilerinToplami
+
+
+// Tablo Yapma
+
+function tabloYap(){
+    let satir = document.querySelector('#satir').value
+    let sutun = document.querySelector('#sutun').value
+    if(sutun <= 12){
+        let tablo = '<table class="table table-bordered">'
+        let j;
+        for(i=1;i<=satir; i++){
+            tablo += '<tr>' // <table> <tr>
+            for(j=1; j<=sutun; j++){
+                tablo += '<td>' + i + '.Satır ' + j + '. Sütun' + '</td>' // <table> <tr> <td>   </td>
+            }
+            tablo += '</tr>' // <table> <tr> <td>....</td> </tr>
+        }
+        tablo += '</table>' // <table> <tr> <td>....</td> </tr> </table>
+        document.querySelector('#tabloSonuc').innerHTML = tablo
+    }     
+    else{
+        alert('Sütun Sayısı 12 de büyük olamaz!')
+    } 
+}
+
