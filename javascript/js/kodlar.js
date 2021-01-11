@@ -141,7 +141,17 @@ function tabloYap(){
         document.querySelector('#tabloSonuc').innerHTML = tablo
     }     
     else{
-        alert('Sütun Sayısı 12 de büyük olamaz!')
+        alert('Sütun Sayısı 12 den büyük olamaz!')
     } 
 }
+/*
 
+    <table>
+        <tr>
+            <td>asdasd</td>
+        </tr>
+    </table>
+
+
+
+*/

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesap Makinesi</title>
+    <link rel="stylesheet" href="../proje/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hesap Makinesi</h1>
+        <div class="row">
+            <div class="col-6">
+                <input type="number" id="numberOne" class="form-control" placeholder="Sayı Girin">
+                <input type="number" id="numberTwo" class="form-control mt-2" placeholder="Sayı Girin">
+                <select id="type" class="form-control mt-2">
+                    <option value="+">Toplama</option>
+                    <option value="-">Çıkartma</option>
+                    <option value="*">Çarpma</option>
+                    <option value="/">Bölme</option>
+                    <option value="%">Yüzde</option>
+                    <option value="^">Kuvvet Alma</option>
+                </select>
+                <div class="d-grid gap-2 col-12 mx-auto mt-2">
+                    <button class="btn btn-primary" type="button" onclick="islem()">Hesapla</button>
+                </div>
+            </div>
+            <div class="col-6" id="sonuc">
+
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="js/calc.js"></script>
+
+<style>
+    #sonuc{
+        font-size: 70px;
+        border: hotpink 2px dotted;
+        text-align: center;
+        padding-top: .5em;
+        overflow: hidden;
+    }
+</style>
+</html>
