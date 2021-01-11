@@ -38,3 +38,54 @@ function islem(){
         }
     }
 }
+let ekran = document.querySelector('#ekran')
+let tur = 0// global işlem türü
+let firstNumber
+let mem
+function getSayi(element){
+    let sayi = element.innerHTML
+
+        ekran.innerHTML += sayi
+}
+
+function temizle(){
+    ekran.innerHTML = ''
+}
+
+function sign(){
+    let ekrandakiSayi = parseInt(ekran.innerHTML)
+    ekran.innerHTML = ekrandakiSayi * -1
+}
+
+function getTur(islem){
+    tur = islem
+    firstNumber = ekran.innerHTML // birinci sayı
+   
+    ekran.innerHTML = ''
+}  
+
+function hesapla(){ // = butonu
+    let lastNumber = ekran.innerHTML // ikinci sayı
+    let sonuc = 0
+    if(tur == '+'){
+        sonuc = parseFloat(firstNumber) + parseFloat(lastNumber)
+        ekran.innerHTML = sonuc.toFixed(2)
+    }
+    else if(tur == '-'){
+        sonuc = parseFloat(firstNumber) - parseFloat(lastNumber)
+        ekran.innerHTML = sonuc.toFixed(2)
+    }
+    else if(tur == '*'){
+        sonuc = parseFloat(firstNumber) * parseFloat(lastNumber)
+        ekran.innerHTML = sonuc.toFixed(2)
+    }
+    else if(tur == '/'){
+        sonuc = parseFloat(firstNumber) / parseFloat(lastNumber)
+        ekran.innerHTML = sonuc.toFixed(2)
+    }
+}
+
+ekran.addEventListener("overflow", function(event){
+    // console.log(event)
+    ekran.style.fontSize = ekran.style.fontSize - 10
+}, false)

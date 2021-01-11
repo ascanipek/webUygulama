@@ -29,6 +29,52 @@
 
             </div>
         </div>
+<hr>
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12"></div>
+            <div class="col-lg-4 col-md-12  col-sm-12">
+                <div class="alert alert-warning" id="ekran"></div>
+            </div>
+            <div class="col-lg-4 col-md-12  col-sm-12"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-12  col-sm-12"></div>
+            <div class="col-lg-4 col-md-12  col-sm-12" id="tuslar">
+                <div class="row">
+                    <div class="col-12 mt-2">
+                        <button class="btn btn-dark btn-lg islem" onclick="temizle()">AC</button>
+                        <button class="btn btn-dark btn-lg  islem" onclick="sign()">+/-</button>
+                        <button class="btn btn-dark btn-lg  islem" onclick="getTur('%')">%</button>
+                        <button class="btn btn-warning btn-lg  islem" onclick="getTur('/')">/</button>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <button class="btn btn-light btn-lg sayi"  onclick="getSayi(this)">7</button>
+                        <button class="btn btn-light btn-lg  sayi" onclick="getSayi(this)">8</button>
+                        <button class="btn btn-light btn-lg  sayi" onclick="getSayi(this)">9</button>
+                        <button class="btn btn-warning btn-lg  islem" onclick="getTur('*')">X</button>
+
+                    </div>
+                    <div class="col-12 mt-2">
+                        <button class="btn btn-light btn-lg  sayi" onclick="getSayi(this)">6</button>
+                        <button class="btn btn-light btn-lg  sayi" onclick="getSayi(this)">5</button>
+                        <button class="btn btn-light btn-lg  sayi" onclick="getSayi(this)">4</button>
+                        <button class="btn btn-warning btn-lg  islem" onclick="getTur('-')">-</button>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <button class="btn btn-light btn-lg  sayi" onclick="getSayi(this)">3</button>
+                        <button class="btn btn-light btn-lg  sayi" onclick="getSayi(this)">2</button>
+                        <button class="btn btn-light btn-lg  sayi" onclick="getSayi(this)">1</button>
+                        <button class="btn btn-warning btn-lg  islem" onclick="getTur('+')">+</button>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <button class="btn btn-light btn-lg  sayi" style="width: 205px;" onclick="getSayi(this)">0</button>
+                        <button class="btn btn-light btn-lg  sayi" onclick="getSayi(this)">,</button>
+                        <button class="btn btn-warning btn-lg  islem" onclick="hesapla()">=</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12  col-sm-12"></div>
+        </div>
 
     </div>
 </body>
@@ -41,6 +87,23 @@
         text-align: center;
         padding-top: .5em;
         overflow: hidden;
+    }
+    #ekran{
+        font-size: 50px;
+        /* border: #ffc107 2px dotted; */
+        text-align: right;
+        padding-top: 1em;
+        overflow: hidden;
+        height: 130px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .sayi{
+        width: 100px;
+    }
+    .islem{
+        width: 100px;
+      
     }
 </style>
 </html>
