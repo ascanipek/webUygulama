@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeOut & Interval</title>
+    <link rel="stylesheet" href="../proje/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 myclass" id="dakika">00</div>
+            <div class="col-1 myclass">:</div>
+            <div class="col-3 myclass" id="saniye">00</div>
+            <div class="col-1 myclass">:</div>
+            <div class="col-3 myclass" id="salise">00</div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <button class="btn btn-lg btn-success" onclick="start()">Başlat / Durdur</button>
+                <!-- <button class="btn btn-lg btn-dark" onclick="stop()">Durdur!</button> -->
+                <button class="btn btn-lg btn-danger" onclick="reset()">Sıfırla!</button>
+                <button class="btn btn-lg btn-primary" onclick="save()">Kaydet!</button>
+            </div>
+            <div class="col-4"></div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12">
+                <h5 style="text-align: center;">Kayıtlar</h5>
+                <ul class="list-group" id="kayitlar"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    let saliseEkran = document.querySelector('#salise')
+    let saniyeEkran = document.querySelector('#saniye')
+    let dakikaEkran = document.querySelector('#dakika')
+    let what = 0
+    let salise = 00, saniye = 00, dakika = 00
+    let sayac
+    let kayit = ''
+    function start(){
+        if(what == 0){
+            what = 1
+            sayac = setInterval(function(){
+            salise++
+            if(salise == 60){
+                salise = 00
+                saniye++
+                if(saniye == 60){
+                    saniye = 00
+                    dakika++
+                    dakikaEkran.innerHTML = dakika
+                }
+                saniyeEkran.innerHTML = saniye
+            }
+            saliseEkran.innerHTML = salise
+            }, 16.6666666667)   
+        } 
+        else if(what == 1){
+            what = 0
+            clearInterval(sayac)
+        }
+    }
+   
+
+//    function stop(){
+//         clearInterval(sayac)
+//    }
+
+   function reset(){
+        clearInterval(sayac)
+        salise = 00
+        saniye = 00
+        dakika = 00
+        saliseEkran.innerHTML = salise
+        saniyeEkran.innerHTML = saniye
+        dakikaEkran.innerHTML = dakika
+   }
+
+   function save(){
+       let buffer = dakika + ' : ' + saniye + ' : ' + salise + '<br>'
+       let item = ''
+       if(kayit != buffer){
+        kayit = buffer
+        item = '<li class="list-group-item list-group-item-action list-group-item-success">' + kayit + '</li>'
+        document.querySelector('#kayitlar').innerHTML += item
+       }
+       else(
+           alert('Aynı kayıt zaten var!')
+       )
+   }
+    // setTimeout(function(){
+    //     sonuc.innerHTML += ' Merhaba'
+    // }, 5000) // belirli bir süre bekler sonra çalışır süre ms olarak verilir
+
+    // setInterval(function(){
+    //     sonuc.innerHTML += ' Merhaba'
+    // }, 10) // durdurulana kadara belirtilen sürede bir kez çalışır süre ms olarak verilir
+
+</script>
+
+<style>
+    .myclass{
+        font-size: 70px;
+        height: 200px;
+        padding-top: 50px;
+        text-align: center;
+    }
+</style>
+</html>
+

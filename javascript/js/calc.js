@@ -60,13 +60,13 @@ function sign(){
 function getTur(islem){
     tur = islem
     firstNumber = ekran.innerHTML // birinci sayı
-   
     ekran.innerHTML = ''
 }  
 
 function hesapla(){ // = butonu
     let lastNumber = ekran.innerHTML // ikinci sayı
-    let sonuc = 0
+    lastNumber == '' ? lastNumber = 1 : lastNumber
+    let sonuc = 0.0
     if(tur == '+'){
         sonuc = parseFloat(firstNumber) + parseFloat(lastNumber)
         ekran.innerHTML = sonuc.toFixed(2)
@@ -89,3 +89,6 @@ ekran.addEventListener("overflow", function(event){
     // console.log(event)
     ekran.style.fontSize = ekran.style.fontSize - 10
 }, false)
+
+
+
