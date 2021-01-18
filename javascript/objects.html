@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../proje/css/bootstrap.css">
+    <title>Objects / Nesneler</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let dizi = [0, 1, 2, "abdullah", "canipek", 3.14]
+
+    let ogrenci = {
+        "isim": "Barış",
+        "soyisim": "Güç",
+        "no": 262,
+        "sınıf": "11/B"
+    }
+
+    let ogrenciler = {
+        262: {
+            "isim": "Barış",
+            "soyisim": "Güç",
+            "sınıf": "11/B",
+            "d_yili": 2004,
+            "yas": function(){
+                let yil = new Date().getFullYear()
+                let yas = yil - this.d_yili
+                return yas
+            }
+        },
+        718: {
+            "isim": "Eren",
+            "soyisim": "Ülgür",
+            "sınıf": "11/B",
+            "d_yili": 2003,
+            "yas": function(){
+                let yil = new Date().getFullYear()
+                let yas = yil - this.d_yili
+                return yas
+            }
+        }
+    }
+
+    // document.writeln(ogrenciler[718].yas())
+
+    console.log(ogrenciler[718].isim + ' ' + ogrenciler[718].yas() + ' yaşındadır')
+    console.log(ogrenciler[262].isim + ' ' + ogrenciler[262].yas() + ' yaşındadır')
+
+    // console.log(ogrenci.isim + ' ' + ogrenci.soyisim)
+
+
+</script>
+
+
+</html>

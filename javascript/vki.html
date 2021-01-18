@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeOut & Interval</title>
+    <link rel="stylesheet" href="../proje/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 myclass">
+                <input type="number" class="form-control" id="kilo" placeholder="Kilo">
+                <input type="number" class="form-control mt-2" id="boy" placeholder="Boy (cm)">
+                <button class="btn btn-success" onclick="vki()">Vücut Kitle Endeksi Hesapla</button>
+            </div>
+            <div class="col-6 myclass">
+                <div id="sonuc"></div>
+                <div id="yorum"></div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+<script>
+    function vki(){
+        let kilo = parseInt(document.querySelector('#kilo').value)
+        let boy = parseInt(document.querySelector('#boy').value) / 100 // cm yi m çevirme 
+
+        let vki = kilo / boy ** 2
+        
+        let sonuc = document.querySelector('#sonuc')
+        let yorum = ''
+
+        if(vki < 20)
+            yorum = 'Zayıf'
+        else if(vki > 20 && vki < 25){
+            yorum = 'Normal'
+            document.querySelector('#yorum').style.color = '#198754'
+        }
+        else if(vki > 25 && vki < 30){
+            yorum = 'Hafif Şişman'
+            document.querySelector('#yorum').style.color = '#3f51b5'
+        }
+        else if(vki > 30 && vki < 35){
+            yorum = 'Şişman'
+            document.querySelector('#yorum').style.color = '#ff5722'
+        }
+        else if(vki > 35 && vki < 45)
+            yorum = 'Obez'
+        else if(vki > 45 && vki < 50)
+            yorum = 'İleri Obez'
+        else if(vki > 50)
+            yorum = 'Morbid'
+        sonuc.innerHTML = Math.round(vki)
+        document.querySelector('#yorum').innerHTML = yorum
+
+    }
+</script>
+
+<style>
+    .myclass{
+        font-size: 70px;
+        height: 200px;
+        padding-top: 50px;
+        text-align: center;
+    }
+</style>
+</html>
+

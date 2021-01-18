@@ -86,8 +86,12 @@ function hesapla(){ // = butonu
 }
 
 ekran.addEventListener("overflow", function(event){
-    // console.log(event)
-    ekran.style.fontSize = ekran.style.fontSize - 10
+    console.log(event)
+    let style = window.getComputedStyle(ekran, null).getPropertyValue('font-size')
+    let font = parseFloat(style)
+    console.log(font)
+    ekran.style.fontSize = (font - 10) + 'px'
+    
 }, false)
 
 

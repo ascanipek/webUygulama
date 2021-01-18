@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events / Olaylar</title>
+    <link rel="stylesheet" href="../proje/css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 myStyle">
+                <input type="text" class="form-control" onkeyup="tus(this.value)">
+            </div>
+            <div class="col-3 myStyle">
+                <select name="" id="iller" onchange="secim()" class="form-control">
+                    <option value="0">Seçim Yapın</option>
+                    <option value="26">Eskişehir</option>
+                    <option value="34">İstanbul</option>
+                    <option value="06">Ankara</option>
+                </select>
+            </div>
+            <div class="col-3 myStyle" onmouseover="giris()">onMouseOver</div>
+            <div class="col-3 myStyle" onmouseout="cikis()">onMouseOut</div>
+        </div>
+        <div class="row">
+            <div class="col-12" id="sonuc">
+
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    .myStyle{
+        height: 200px;
+        background-color: hotpink;
+        border-radius: 50%;
+        text-align: center;
+        margin-top: 30px;
+        
+    }
+</style>
+<script>
+
+    document.addEventListener('visibilitychange', function(ev) {
+        console.log(`Tab state : ${document.visibilityState}`)
+        if(document.visibilityState == 'hidden')
+            document.title = 'Bizi Unutma!'
+        else if(document.visibilityState == 'visible')
+            document.title = 'Tekrar Hoşgeldin!'
+    })
+
+    let sonuc = document.querySelector('#sonuc')
+    function tik(){
+        sonuc.innerHTML = "Tıklama olayı gerçekleşti ve fonksiyonu çalıştı"
+    }
+    function dbtik(){
+        sonuc.innerHTML = "Çift tıklama olayı gerçekleşti ve fonksiyonu çalıştı"
+    }
+    function giris(){
+        sonuc.innerHTML = "Mouse giriş olayı gerçekleşti ve fonksiyonu çalıştı"
+    }
+    function cikis(){
+        sonuc.innerHTML = "Mouse çıkış olayı gerçekleşti ve fonksiyonu çalıştı"
+    }
+    tus = (girilenDeger) => {
+        sonuc.innerHTML = girilenDeger
+    }
+
+    secim = () => {
+        // sonuc.innerHTML = document.querySelector('#iller').value
+        sonuc.innerHTML = document.querySelector('#iller').options[document.querySelector('#iller').selectedIndex].text
+    }
+</script>
+</html>
