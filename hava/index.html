@@ -11,8 +11,9 @@
 
 		<!-- Loading third party fonts -->
 		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
-		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+		<!-- <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+		<link rel="stylesheet" href="weather-icons/css/weather-icons.min.css">
 		<!-- Loading main css file -->
 		<link rel="stylesheet" href="style.css">
 		
@@ -143,7 +144,7 @@
                             <option value="Osmaniye">Osmaniye</option>
                             <option value="Düzce">Düzce</option>
                         </select>
-                        <input type="submit" value="Bul" onclick="getData(city)">
+                        <!-- <input type="submit" value="Bul" onclick="getData(city)"> -->
 					</form>
 				</div>
 			</div>
@@ -157,16 +158,17 @@
 							</div> <!-- .forecast-header -->
 							<div class="forecast-content">
 								<div class="location" id="sehir"></div>
+								<span id="aciklama" style="text-transform: capitalize; color: #20afda;"></span>
 								<div class="degree">
 									<div class="num"><span id="temp"></span><sup>o</sup>C</div>
-									<div class="forecast-icon">
-										<img src="images/icons/icon-1.svg" alt="" width=90>
+									<div class="forecast-icon" id="today-icon">
+										
 									</div>	
 								</div>
-                                <span style="margin-bottom: 20px;"><i class="fa fa-home"> </i> Hissedilen: <span id="feelsLike"></span><sup>o</sup>C</span> <br>
-								<span><img src="images/icon-umberella.png" alt="">20%</span>
-								<span><img src="images/icon-wind.png" alt="">18km/h</span>
-								<span><img src="images/icon-compass.png" alt="">East</span>
+                                <span style="margin-bottom: 20px;"><i class="fa fa-home"> </i> Hissedilen: <span id="feelsLike"></span></span> <br>
+								<span><i class="fa fa-globe-europe"></i> <span id="ihtimal"></span></span>
+								<span><i class="fa fa-wind"> </i> <span id="windSpeed"></span></span>
+								<span><i class="fa fa-tint"> </i> <span id="humidity"></span></span>
 							</div>
 						</div>
 						<div class="forecast">
