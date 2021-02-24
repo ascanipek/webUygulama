@@ -78,6 +78,17 @@ fetch('http://api.openweathermap.org/data/2.5/forecast?appid=0a37e45a73167536301
     document.querySelector('#fifthIcon').innerHTML = '<i class="wi wi-owm-' + result.dort.weather[0].id + '" style="font-size: 55px; color: #20afda;"></i>'
     document.querySelector('#sixthIcon').innerHTML = '<i class="wi wi-owm-' + result.bes.weather[0].id + '" style="font-size: 55px; color: #20afda;"></i>'
 
+    document.querySelector('#secondWindSpeed').innerHTML = result.bir.wind.speed + ' km/h' 
+    document.querySelector('#thirdWindSpeed').innerHTML = result.iki.wind.speed + ' km/h' 
+    document.querySelector('#forthWindSpeed').innerHTML = result.uc.wind.speed + ' km/h' 
+    document.querySelector('#fifthWindSpeed').innerHTML = result.dort.wind.speed + ' km/h' 
+    document.querySelector('#sixthWindSpeed').innerHTML = result.bes.wind.speed + ' km/h' 
+
+    document.querySelector('#secondSunrise').innerHTML = result.bir.weather[0].description
+    document.querySelector('#thirdSunrise').innerHTML = result.iki.weather[0].description
+    document.querySelector('#forthSunrise').innerHTML = result.uc.weather[0].description
+    document.querySelector('#fifthSunrise').innerHTML = result.dort.weather[0].description
+    document.querySelector('#sixthSunrise').innerHTML =result.bes.weather[0].description
 
 
 
@@ -122,6 +133,7 @@ function getCity() {
         // console.log(data)
         let otherDays = []
         
+        
         data.map(function(item){
             let dt = tarih(item.dt)
             let gun = dt.gun
@@ -138,6 +150,7 @@ function getCity() {
             dort: otherDays[28],
             bes: otherDays[36]
         }
+
         // gun = tarih(result.bir.dt).gun
         document.querySelector('#secondDay').innerHTML = tarih(result.bir.dt).isimGun
         document.querySelector('#thirdDay').innerHTML = tarih(result.iki.dt).isimGun
@@ -163,7 +176,17 @@ function getCity() {
         document.querySelector('#fifthIcon').innerHTML = '<i class="wi wi-owm-' + result.dort.weather[0].id + '" style="font-size: 55px; color: #20afda;"></i>'
         document.querySelector('#sixthIcon').innerHTML = '<i class="wi wi-owm-' + result.bes.weather[0].id + '" style="font-size: 55px; color: #20afda;"></i>'
 
+        document.querySelector('#secondWindSpeed').innerHTML = result.bir.wind.speed + ' km/h' 
+        document.querySelector('#thirdWindSpeed').innerHTML = result.iki.wind.speed + ' km/h' 
+        document.querySelector('#forthWindSpeed').innerHTML = result.uc.wind.speed + ' km/h' 
+        document.querySelector('#fifthWindSpeed').innerHTML = result.dort.wind.speed + ' km/h' 
+        document.querySelector('#sixthWindSpeed').innerHTML = result.bes.wind.speed + ' km/h' 
 
+        document.querySelector('#secondSunrise').innerHTML = result.bir.weather[0].description
+        document.querySelector('#thirdSunrise').innerHTML = result.iki.weather[0].description
+        document.querySelector('#forthSunrise').innerHTML = result.uc.weather[0].description
+        document.querySelector('#fifthSunrise').innerHTML = result.dort.weather[0].description
+        document.querySelector('#sixthSunrise').innerHTML =result.bes.weather[0].description
 
 
         console.log(result)
